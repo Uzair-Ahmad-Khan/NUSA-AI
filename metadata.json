@@ -1,0 +1,6 @@
+{
+  "name": "NUSA AI",
+  "description": "Intelligent AI assistant with real-time WebSocket response streaming, Python SQLite database, conversation memory management, and Q&A analytics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

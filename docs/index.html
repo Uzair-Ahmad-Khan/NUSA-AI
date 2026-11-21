@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b1020" />
+    <title>NUSA AI — Intelligent AI Assistant</title>
+    <meta name="description" content="Intelligent AI assistant with real-time WebSocket response streaming, Python SQLite database, conversation memory management, and Q&A analytics." />
+    <meta property="og:title" content="NUSA AI — Intelligent AI Assistant" />
+    <meta property="og:description" content="Intelligent AI assistant with real-time WebSocket response streaming, Python SQLite database, conversation memory management, and Q&A analytics." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./logo.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="./logo.png" />
+    <link rel="icon" type="image/png" href="./logo.png" />
+    <link rel="apple-touch-icon" href="./logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Google Identity Services for real Google OAuth Sign-in -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script type="module" crossorigin src="./assets/nusa-app.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/nusa-app.css">
+  </head>
+  <body style="background:#0b1020;color:#eef3ff;margin:0;">
+    <div id="root"></div>
+    <script>
+      window.__loadStaticNusa = function () {
+        if (window.__NUSA_MOUNTED__ || window.__NUSA_STATIC_LOADING__) return;
+        window.__NUSA_STATIC_LOADING__ = true;
+        var base = document.createElement('base');
+        base.href = './docs/';
+        document.head.appendChild(base);
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = './assets/nusa-app.css';
+        document.head.appendChild(link);
+        var script = document.createElement('script');
+        script.type = 'module';
+        script.src = './assets/nusa-app.js';
+        document.body.appendChild(script);
+      };
+      setTimeout(function () {
+        if (!window.__NUSA_MOUNTED__) window.__loadStaticNusa();
+      }, 600);
+    </script>
+  </body>
+</html>
+
